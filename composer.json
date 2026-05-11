@@ -1,0 +1,48 @@
+{
+    "name": "package-publishing/automated-package-publishing-sdk",
+    "description": "Package Publishing",
+    "type": "library",
+    "keywords": [],
+    "homepage": "https://www.pp.org",
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Package Publisher",
+            "email": "support@pp.org"
+        }
+    ],
+    "support": {},
+    "prefer-stable": false,
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "apimatic/unirest-php": "^4.0.6",
+        "apimatic/core-interfaces": "~0.1.5",
+        "apimatic/core": "~0.3.17"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "5.4.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "APIMATICCalculatorLib\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "APIMATICCalculatorLib\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint-src": "phpcs --standard=phpcs-ruleset.xml src/",
+        "lint-src-fix": "phpcbf --standard=phpcs-ruleset.xml src/",
+        "analyze": "phan --allow-polyfill-parser -p",
+        "lint": [
+            "@lint-src"
+        ]
+    }
+}
