@@ -27,6 +27,8 @@ function calculate(string $operation, float $x, float $y): float
 
 ## Response Type
 
+**200**
+
 `float`
 
 ## Example Usage
