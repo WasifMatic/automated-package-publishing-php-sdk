@@ -18,7 +18,9 @@ Possible operators are sum, subtract, multiply, divide
 
 ## Example
 
-```
-SUM
+```php
+use APIMATICCalculatorLib\Models\OperationTypeEnum;
+
+$operationType = OperationTypeEnum::SUM;
 ```
 
